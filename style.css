@@ -128,7 +128,7 @@ Main
   background-size: cover;
   background-position: bottom;
   min-height: 30rem;
-  max-width: 30rem;
+  max-width: 25rem;
   width: 100%;
   top: -140px;
 }
@@ -277,5 +277,229 @@ Hover
   }
   .social-links-footer a:hover svg path {
     fill: hsl(160, 60%, 67%);
+  }
+}
+
+/*
+===============
+Desktop
+===============
+*/
+@media (min-width: 768px) {
+  /* header - desktop */
+  header {
+    z-index: 10;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    background-color: white;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-menu {
+    display: block;
+    background: transparent;
+    position: relative;
+    top: 0;
+    padding: 0;
+    min-height: 0;
+  }
+  .nav-menu a {
+    font-weight: 500;
+    padding-top: 2.2rem;
+    padding-bottom: 1.5rem;
+    display: block;
+    color: hsl(233, 8%, 62%);
+  }
+  .nav-menu ul {
+    flex-direction: row;
+    padding: 0;
+    width: auto;
+    margin: 0;
+    min-height: 0;
+    max-width: none;
+  }
+  header .invite-btn {
+    margin: 0;
+    display: block;
+  }
+  .hero-bg {
+    background-image: url(./images/bg-intro-desktop.svg);
+  }
+  .nav-menu li:after {
+    display: block;
+    content: "";
+    height: 4px;
+    background-image: linear-gradient(45deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    transform: scaleX(0.0001);
+    transition: transform 150ms ease-in-out;
+    position: relative;
+    top: 100%;
+  }
+  /* hero desktop */
+  .hero-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .intro {
+    order: 0;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 2rem 3rem;
+    max-width: 31rem;
+    margin: 0;
+  }
+  .hero-bg {
+    order: 1;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    max-width: 50rem;
+    overflow-x: clip;
+  }
+  .hero-phone-img {
+    background-position: top;
+    min-height: 70rem;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    position: absolute;
+    max-width: 62rem;
+    z-index: 1;
+    min-width: 58rem;
+    top: -64px;
+  }
+  /* main - desktop */
+  .info-wrapper {
+    max-width: 81rem;
+  }
+  .info-head {
+    padding: 1rem;
+    align-items: flex-start;
+    margin-right: auto;
+    max-width: 37rem;
+    padding: 2rem;
+    text-align: left;
+    margin: 0;
+    margin-right: auto;
+    max-width: 33rem;
+  }
+  .info-body {
+    max-width: none;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    width: 100%;
+  }
+  .info-body div {
+    text-align: left;
+    align-items: flex-start;
+    max-width: 17rem;
+  }
+  .info img {
+    margin: 0;
+    margin-right: auto;
+  }
+  /* articles - desktop */
+  .articles {
+    padding: 2rem;
+    background-color: hsl(0, 0%, 98%);
+  }
+  .articles-wrapper-2 {
+    max-width: 81rem;
+  }
+  .articles-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .articles h2 {
+    width: 100%;
+    text-align: left;
+    padding: 0 1rem;
+  }
+  article {
+    gap: 0;
+    border-radius: 7px;
+    max-width: 17rem;
+  }
+  article img {
+    aspect-ratio: 16 / 10;
+  }
+  /* footer - desktop */
+  .article-text {
+    padding: 1rem 1rem 3rem;
+    background-color: white;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 3rem 3rem;
+  }
+  .footer-wrapper {
+    max-width: 81rem;
+    width: 67rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .footer-logo {
+    margin: 0;
+    margin-right: auto;
+    padding-top: 1rem;
+  }
+  .footer-menu {
+    flex-direction: row;
+    min-width: 14rem;
+    width: 20rem;
+    justify-content: space-around;
+  }
+  .footer-menu ul {
+    align-items: flex-start;
+  }
+  footer .invite-btn {
+    margin-left: auto;
+    width: max-content;
+  }
+  /*
+  ===============
+  Desktop L+
+  ===============
+  */
+  @media (min-width: 968px) {
+    .intro {
+      padding: 2rem 5rem;
+    }
+    .info-head {
+      padding: 2rem 4rem;
+      max-width: 37rem;
+    }
+    .info-body {
+      padding: 2rem 4rem;
+    }
+    .articles {
+      padding: 2rem 4rem;
+    }
+    footer {
+      padding: 3rem 5rem;
+    }
+  }
+  @media (hover) {
+    .nav-menu a:hover {
+      color: hsl(233, 26%, 24%);
+    }
+    .nav-menu a:hover {
+      text-shadow: none;
+    }
   }
 }
